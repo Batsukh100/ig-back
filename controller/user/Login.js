@@ -17,7 +17,7 @@ export const Login = async (req, res) => {
 
     if (isValid === true) {
       const accessToken = jwt.sign({ data: isUser }, JWT_SECRET, {
-        expiresIn: "1h",
+        expiresIn: "12h",
       });
       res.status(200).json(accessToken);
     } else {

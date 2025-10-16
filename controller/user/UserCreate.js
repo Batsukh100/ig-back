@@ -3,7 +3,6 @@ import { IgUsersModel } from "../../Schema/UserSchema.js";
 import jwt from "jsonwebtoken";
 const JWT_SECRET = process.env.JWT_SECRET;
 
-
 export const UserCreate = async (req, res) => {
   const body = req.body;
   const user = await IgUsersModel.findOne({
@@ -26,7 +25,7 @@ export const UserCreate = async (req, res) => {
     });
 
     const accessToken = jwt.sign({ data: createUser }, JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "12h",
     });
     res.status(200).json(accessToken);
   }

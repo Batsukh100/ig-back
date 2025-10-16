@@ -13,7 +13,5 @@ postRouter.get("/Profile", authMiddleware, PostUser);
 postRouter.get("/user/:userId", authMiddleware, User);
 postRouter.post("/like-toggle/:postId", authMiddleware, LikeToggle);
 postRouter.get("/Get", PostGet);
-postRouter.post("/comment/:postId", authMiddleware, postComment);
-
 
 export default postRouter;

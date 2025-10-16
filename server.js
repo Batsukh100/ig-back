@@ -5,6 +5,7 @@ import userRouter from "./route/user.route.js";
 import postRouter from "./route/post.route.js";
 import { IgUsersModel } from "./Schema/UserSchema.js";
 import dotenv from "dotenv";
+import commentRouter from "./route/comment.route.js";
 dotenv.config();
 
 const app = express();
@@ -22,6 +23,7 @@ connectToDB();
 
 app.use("/User", userRouter);
 app.use("/Post", postRouter);
+app.use("/Comment", commentRouter);
 app.get("/", async (_req, res) => {
   const AllUsers = await IgUsersModel.find();
   res.json(AllUsers);
