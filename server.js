@@ -24,10 +24,6 @@ connectToDB();
 app.use("/User", userRouter);
 app.use("/Post", postRouter);
 app.use("/Comment", commentRouter);
-app.get("/", async (_req, res) => {
-  const AllUsers = await IgUsersModel.find();
-  res.json(AllUsers);
-});
 
 // app.get("/Post:userId");
 // app.post("/Users");

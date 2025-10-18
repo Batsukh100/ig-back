@@ -9,7 +9,7 @@ export const authMiddleware = (req, _res, next) => {
   if (!accessToken) throw new Error("need authToken");
 
   const user = jwt.verify(accessToken, JWT_SECRET);
-  if (!user) throw new Error("need ton sign in");
+  if (!user) throw new Error("need to sign in");
 
   req.user = user.data;
 

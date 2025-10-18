@@ -5,7 +5,7 @@ import { CommentGet } from "../controller/comment/CommentGet.js";
 
 const commentRouter = express.Router();
 
-commentRouter.post("/Create", authMiddleware, CommentCreate);
+commentRouter.post("/Create/:postId", authMiddleware, CommentCreate);
 commentRouter.get("/Get/:postId", authMiddleware, CommentGet);
 
 export default commentRouter;

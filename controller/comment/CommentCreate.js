@@ -2,8 +2,8 @@ import { CommentModel } from "../../Schema/CommentSchema.js";
 
 export const CommentCreate = async (req, res) => {
   const userId = req.user._id;
-
-  const { postId, comment } = req.body;
+  const postId = req.params.postId;
+  const { comment } = req.body;
 
   const createdComments = await CommentModel.create({
     postId,
