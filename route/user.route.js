@@ -1,6 +1,6 @@
 import express from "express";
 import { Login } from "../controller/user/Login.js";
-import { UserCreate } from "../controller/user/userCreate.js";
+import { UserCreate } from "../controller/user/UserCreate.js";
 import { authMiddleware } from "../middleware/auth-middleware.js";
 import { FollowMethod } from "../controller/user/FollowMethod.js";
 import { GetUser } from "../controller/user/GetUser.js";
