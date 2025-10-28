@@ -1,5 +1,5 @@
 import express from "express";
-import { Login } from "../controller/user/login.js";
+import { Login } from "../controller/user/Login.js";
 import { UserCreate } from "../controller/user/userCreate.js";
 import { authMiddleware } from "../middleware/auth-middleware.js";
 import { FollowMethod } from "../controller/user/FollowMethod.js";
